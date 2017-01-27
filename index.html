@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Displaying text directions with <code>setPanel()</code></title>
+    <link rel="stylesheet" type="text/css" href="google_map.css">
+  </head>
+  <body>
+    <div id = "top-panel">
+      <form id = "myForm">
+        Destination:
+            <select name = "end" style="margin-right: 15px;">
+              <option value = "282 2nd Street 4th floor, San Francisco, CA 94105">Click Time Office</option>
+            </select>
+        Shop:
+            <select id="halts" name = "shop" multiple style="margin-right: 15px;top: 24px;position: relative;height: 40px;">
+              <option value = "coffee">Coffee</option>
+              <option value = "donuts">Donuts</option>
+            </select>
+        Transport:
+            <select name = "transport" style="margin-right: 15px;">
+              <option value = "WALKING">Walking</option>
+              <option value = "BICYCLING">Biking</option>
+              <option value = "TRANSIT">Public Transport</option>
+            </select>
+
+        <button type ="button" onclick="submitAction()">Submit</button>
+      </form>
+    </div>
+    <div id="right-panel"></div>
+    <div id="map"></div>
+    <script src="google_api.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVrdolSb0IgsuuHTeF-ILm0pxQNzBN9Do&callback=initMap"></script>
+    
+  </body>
+</html>
